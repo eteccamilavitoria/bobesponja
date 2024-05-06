@@ -22,6 +22,30 @@ function inserir(lg,sn,mail){
     })
 }
 
+//Selecionar dados por id - select nometabela
+
+function selecionaeTudo(id){
+    connection.query(sql, id, function(error,results,fields){
+
+    }
+
+
+
+function selecionaeTudo(){
+    let sql = "select * from users"
+    connection.query(sql, id, function(error,results,fields){
+       
+        for(let i=0;i<results.length;i++){
+     
+            if(error) throw error
+        console.log("Selecionado: " + results[i].id + ":" + results[i].login + ":" + results[i].email)
+        }
+    })
+ 
+}
+
+selecionaPorId()
+
 inserir("Camila","9999","camila9@gmail.com")
 
 connection.end()
